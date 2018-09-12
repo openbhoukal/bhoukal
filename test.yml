@@ -1,0 +1,9 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
+  - copy: src=/etc/rsyslog.conf dest=/root/test/test.conf owner=root group=root mode=644 backup=yes
