@@ -6,4 +6,4 @@
  
   - name: Hello World!
     shell: echo "Hi! Tower is working."
-  - copy: src=/etc/rsyslog.conf dest=/root/test/test.conf owner=root group=root mode=644 backup=yes
+  - copy: src=/root/log1/login dest=/root/test/test.conf owner=root group=root mode=644
