@@ -1,9 +1,12 @@
 ---
 - name: Hello World!
+  remote_user: root
   hosts: all
- 
   tasks:
- 
   - name: Hello World!
-    shell: echo "Hi! Tower is working."
-  - copy: src=/root/log1/login dest=/root/test/test.conf owner=root group=root mode=644
+    shell: echo "Hi! AWX is working."
+  - name: install base packages
+    yum: name={{ item }}  state=installed
+    with_items:
+      - python-pip
+      - git
