@@ -6,7 +6,8 @@
   - name: Hello World!
     shell: echo "Hi! AWX is working."
   - name: install base packages
-    yum: name={{ item }}  state=installed
+    yum: name={{ item }} state=installed
     with_items:
+      - epel-release
       - python-pip
       - git
