@@ -5,7 +5,11 @@
   tasks:
   - name: Hello World!
     shell: echo "Hi! AWX is working."
+    tags:
+       - message_display
   - name: install base packages
+    tags:
+       - package installation
     yum: name={{ item }} state=installed
     with_items:
       - git
