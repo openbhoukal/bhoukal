@@ -1,7 +1,7 @@
 ---
 - name: Hello World!
   remote_user: root
-  hosts: all
+  hosts: server
   tasks:
   - name: Hello World!
     shell: echo "Hi! AWX is working."
